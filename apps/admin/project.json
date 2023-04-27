@@ -1,7 +1,7 @@
 {
-  "name": "storefront",
+  "name": "admin",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/storefront/src",
+  "sourceRoot": "apps/admin/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -10,19 +10,16 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/storefront",
-        "index": "apps/storefront/src/index.html",
+        "outputPath": "dist/apps/admin",
+        "index": "apps/admin/src/index.html",
         "baseHref": "/",
-        "main": "apps/storefront/src/main.tsx",
-        "tsConfig": "apps/storefront/tsconfig.app.json",
-        "assets": [
-          "apps/storefront/src/favicon.ico",
-          "apps/storefront/src/assets"
-        ],
-        "styles": ["apps/storefront/src/styles.scss"],
+        "main": "apps/admin/src/main.tsx",
+        "tsConfig": "apps/admin/tsconfig.app.json",
+        "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+        "styles": ["apps/admin/src/styles.scss"],
         "scripts": [],
         "isolatedConfig": true,
-        "webpackConfig": "apps/storefront/webpack.config.js"
+        "webpackConfig": "apps/admin/webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -34,8 +31,8 @@
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/storefront/src/environments/environment.ts",
-              "with": "apps/storefront/src/environments/environment.prod.ts"
+              "replace": "apps/admin/src/environments/environment.ts",
+              "with": "apps/admin/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -51,16 +48,16 @@
       "executor": "@nrwl/webpack:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "storefront:build",
+        "buildTarget": "admin:build",
         "hmr": true,
-        "port": 4201
+        "port": 4200
       },
       "configurations": {
         "development": {
-          "buildTarget": "storefront:build:development"
+          "buildTarget": "admin:build:development"
         },
         "production": {
-          "buildTarget": "storefront:build:production",
+          "buildTarget": "admin:build:production",
           "hmr": false
         }
       }
@@ -69,20 +66,20 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/storefront/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/admin/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {
       "executor": "@nrwl/web:file-server",
       "options": {
-        "buildTarget": "storefront:build"
+        "buildTarget": "admin:build"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/storefront/jest.config.ts",
+        "jestConfig": "apps/admin/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

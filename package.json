@@ -2,7 +2,9 @@
   "name": "com-apps",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "npx nx run-many -t serve"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -10,6 +12,7 @@
     "@mui/material": "^5.12.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-router-dom": "6.8.1",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
@@ -30,6 +33,7 @@
     "@types/node": "18.14.2",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "@types/react-router-dom": "5.3.3",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "babel-jest": "^29.4.1",
