@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@com-apps/com-ui": ["libs/com-ui/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
