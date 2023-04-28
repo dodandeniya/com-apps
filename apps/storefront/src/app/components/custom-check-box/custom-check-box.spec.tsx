@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import CustomeButton from './custome-button';
+import CustomCheckBox from './custom-check-box';
 
-describe('CustomeButton', () => {
+describe('CustomCheckBox', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<CustomeButton />);
+    const { baseElement } = render(<CustomCheckBox />);
     expect(baseElement).toBeTruthy();
   });
 });

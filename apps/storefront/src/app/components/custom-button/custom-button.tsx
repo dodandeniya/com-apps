@@ -2,17 +2,17 @@ import { Button } from '@mui/material';
 import styles from './custome-button.module.scss';
 
 /* eslint-disable-next-line */
-export interface CustomeButtonProps {
+export interface CustomButtonProps {
   label: string;
   color?: 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
   borderRadius?: number | string;
   variant?: 'text' | 'contained' | 'outlined';
 }
 
-export function CustomeButton({
+export function CustomButton({
   color = 'primary',
   ...props
-}: CustomeButtonProps) {
+}: CustomButtonProps) {
   return (
     <Button
       aria-label={props.label}
@@ -25,4 +25,4 @@ export function CustomeButton({
   );
 }
 
-export default CustomeButton;
+export default CustomButton;
